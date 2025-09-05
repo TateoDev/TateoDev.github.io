@@ -1,0 +1,119 @@
+/* General dark theme */
+body {
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+  background: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #1e1e1e;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+h1, h2 {
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+/* Location + Time inline */
+.location-time {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.location {
+  font-size: 1.2rem;
+}
+
+.clock {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffcc00; /* yellow */
+}
+
+/* Sections */
+section {
+  max-width: 90vw;  /* shrink a bit on sides */
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+/* Projects row container */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;   /* allow wrapping */
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 30%;     
+  min-width: 280px;
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  box-sizing: border-box;
+}
+
+/* Content wrapper above the iframe */
+.project-content {
+  flex: 1;   /* pushes iframe + below content down */
+}
+
+/* Videos fit inside */
+.project-gif {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  margin-top: 1rem; /* ensures spacing from bullets */
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1e1e1e;
+  color: #aaaaaa;
+  margin-top: 2rem;
+}
+
+/* Links */
+a {
+  color: #ffcc00; /* yellow */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #82cfff;
+}
+
+/* -------- Responsive Breakpoints -------- */
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .project {
+    flex: 1 1 45%; /* 2 per row */
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 640px) {
+  .project {
+    flex: 1 1 100%; /* 1 per row */
+  }
+}
